@@ -8,7 +8,7 @@ from eucaops import Eucaops
 
 class DNS(InstanceBasics):
     def resolve_hostname(self, instance):
-        clc_ip = self.tester.get_clc_ip()
+        clc_ip = self.tester.get_ec2_ip()
         #nslookup = "nslookup " + clc_ip + " +short "
         ns_suffix = " | grep Address | grep -v \"#\" | awk '{print $2}'"
         response = self.tester.sys("nslookup " + instance.public_dns_name  + " " + clc_ip + ns_suffix)
