@@ -1,3 +1,30 @@
+neil_dns_test
+=============
+
+## Description
+
+Check to make sure the Eucalyptus DNS functionality works
+
+## Procedure
+
+1. Check networking mode set managed bit
+2. Get list of emis parse it and add them to an array
+3. Grab the first keypair from the list
+4. Load the entire address pool into an array
+5. Grab a random IP
+6. Load all the groups
+7. Pick a group at random
+8. Load up 1 instance with these random values
+9. Check 20 every 30 seconds times that the insance came up and running and that it has an ip (ie not 0.0.0.0)
+10. Clean out any terminated instances
+11. Get running instance public and private ips
+12. Check that the DNS server properly returns an entry for the public ip
+13. Check that the DNS server properly returns an entry for the private ip
+14. Make a bucket
+15. Resolve the hostname of the bucket with the walrus
+16. Delete bucket
+
+
 # Eucalyptus Testunit Framework
 
 Eucalyptus Testunit Framework is designed to run a list of test scripts written by Eucalyptus developers.
